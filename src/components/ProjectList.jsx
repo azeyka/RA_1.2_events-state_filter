@@ -1,12 +1,11 @@
 import React from 'react'
 
 function ProjectList(props) {
-    const {projects} = props,
-        {fileName} = project => project.img.split('\\').pop().split('/').pop();
+    const {projects} = props;
 
     return (
         <div className='projects'>
-            {projects.map(project => <img key={fileName} className='project_img' src={project.img} alt='project_img'></img>)}    
+            {projects.map((project, index) => <img key={`${index}_${project.img}`} className='project_img' src={project.img} alt='project_img'></img>)}    
         </div>
     )
 }
