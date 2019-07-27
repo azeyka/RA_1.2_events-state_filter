@@ -1,0 +1,39 @@
+.main_content {
+  max-width: 930px;
+  min-width: 520px;
+  margin: auto;
+}
+
+.filters {
+  padding: 20px 0;
+}
+
+button {
+  background: white;
+  border: 1px solid black;
+  font-weight:400;
+  height:30px;
+  margin-right: 5px;
+  padding-left:25px;
+  padding-right:25px;
+  box-sizing:border-box;
+  text-transform: uppercase;
+}
+
+.selected {
+  background:#333;
+  border:none;
+  height:30px;
+  color:#fff;
+}
+
+.projects {
+  column-count: 3;
+}
+
+.project_img {
+  break-inside: avoid;
+  width: 300px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
