@@ -4,16 +4,16 @@ import ProjectList from './ProjectList';
 
 export default class Portfolio extends Component {
     state = {
-        filters: ["All", "Websites", "Flayers", "Business Cards"],
         selected: 'All',
     }
 
     onSelectFilter = filter => {
-        this.setState({selected: filter})
+        this.setState({selected: filter});
     }
 
     render() {
-        const projects = [{
+        const  filters = ["All", "Websites", "Flayers", "Business Cards"],
+        projects = [{
             img: "https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/events-state/filter/img/mon.jpg",
             category: "Business Cards"
           }, {
@@ -64,18 +64,17 @@ export default class Portfolio extends Component {
           }, {
             img: "https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/events-state/filter/img/place200x290_3.png",
             category: "Flayers"
-          }]
-
+          }];
+         
         return (
             <div className='main_content'>
                 <Toolbar    
-                    filters={this.state.filters}
+                    filters={filters}
                     selected={this.state.selected}
                     onSelectFilter={this.onSelectFilter}/>
                 <ProjectList
                     projects={this.state.selected === 'All' ? projects : projects.filter(prj => prj.category === this.state.selected)}/>
             </div>
-            
         )
     }
-}
+};
