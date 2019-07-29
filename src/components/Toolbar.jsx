@@ -23,6 +23,6 @@ export default Toolbar
 
 Toolbar.propTypes = {
     filters: PropTypes.instanceOf(Object).isRequired,
-    selected: PropTypes.instanceOf(String).isRequired,
+    selected: PropTypes.string.isRequired,
     onSelectFilter: PropTypes.instanceOf(Function).isRequired,
 };
